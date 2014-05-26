@@ -1,0 +1,101 @@
+<RaidInfo>
+    <version>GL-1.0</version>
+    <!-- the raid start in epoch time-->
+    <start>1000000000</start>
+    <!-- the raid end in epoch time-->     
+    <end>1000010900</end>
+    <zone>Raid Name Goes Here</zone>
+    <PlayerInfos>
+        <key1>
+            <name>Player Name 1</name>
+        </key1>
+        <key2>
+            <name>Player Name 2</name>
+        </key2>
+    </PlayerInfos>
+    <BossKills>
+        <!-- the boss kills will be the events for the raid -->
+        <key1>
+            <name>Boss Name 1</name>
+            <!-- the time of the kill in epoch time-->
+            <time>1000000100</time>
+            <!-- the list of attendees for the bosskill -->
+            <attendees>
+                <key1>
+                    <name>CharacterName1</name>
+                </key1>
+                <key2>
+                    <name>CharacterName2</name>
+                </key2>                 
+             </attendees>
+             <!-- an indicator that this is from the manual method -->
+             <event_source>ManualXML</event_source>
+             <!-- the DKP value of the bosskill, blank will use defaults from events -->
+             <value></value>
+        </key1>
+        <key2>
+            <name>Boss Name 2</name>
+            <!-- the time of the kill in epoch time-->
+            <time>1000000200</time>
+            <!-- the list of attendees for the bosskill -->
+            <attendees>
+                <key1>
+                    <name>CharacterName1</name>
+                </key1>
+                <key2>
+                    <name>CharacterName2</name>
+                </key2>                 
+             </attendees>
+             <!-- an indicator that this is from the manual method -->
+             <event_source>ManualXML</event_source>
+             <!-- the DKP value of the bosskill, blank will use defaults from events -->
+             <value></value>                                      
+        </key2>
+    </BossKills>
+    <NextBoss>unused</NextBoss>
+    <Join>
+        <!-- these keys indicate when a player joined the raid -->
+        <!-- to get credit for attendance for the boss, the player must join before the boss kill time and leave after the boss kill time -->
+        <key1>
+            <player>Player Name 1</player>
+            <time>1000000000</time>
+        </key1>
+        <key2>
+            <player>Player Name 2</player>
+            <time>1000000000</time>
+        </key2>
+    </Join>
+    <Leave>
+        <key1>
+            <player>Player Name 1</player>
+            <time>1000010900</time>
+        </key1>
+        <key2>
+            <player>Player Name 2</player>
+            <time>1000010700</time>
+        </key2>
+    </Leave>
+    <Loot>
+        <!-- these are the item drops. the only used fields are ItemName, Player, Costs and Boss  the Costs field is the DKP spent on the item-->
+        <key1>
+            <ItemName>Item Name 1</ItemName>
+            <Count>0</Count>
+            <Player>Player Name 1</Player>
+            <Time>1000000005</Time>
+            <Zone>Raid Name Goes Here</Zone>
+            <Boss>Boss Name 1</Boss>
+            <!-- the DKP spent on the item --> 
+            <Costs>123</Costs>
+        </key1>
+        <key2>
+            <ItemName>Item Name 2</ItemName>
+            <Count>0</Count>
+            <Player>Player Name 2</Player>
+            <Time>1000000005</Time>
+            <Zone>Raid Name Goes Here</Zone>
+            <Boss>Boss Name 2</Boss>
+            <!-- the DKP spent on the item --> 
+            <Costs>123</Costs>    
+        </key2>
+    </Loot>
+</RaidInfo>
